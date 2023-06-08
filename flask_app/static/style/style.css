@@ -1,0 +1,56 @@
+* {
+    /* border: 1px solid red; */
+    height: auto;
+    width: auto;
+}
+
+body {
+    background-color: #F7E6C4;
+}
+
+h1,
+h2,
+h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #606C5D;
+}
+
+h4,
+h5,
+h6,
+p,
+form,
+input,
+label,
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #606C5D;
+}
+
+/* .regisration_login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+.registration_form {
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    justify-content: space-around;
+}
+
+button {
+    background-color: #F1C376;
+    border-radius: 10%;
+    border: none;
+    color: #606C5D;
+    padding: 3px 10px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

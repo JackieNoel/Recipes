@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/style.css') }}">
+    <title>Registration Page</title>
+</head>
+<body>
+    <div class="regisration_login_form">
+        <h1>Welcome!</h1>
+        <p>Please complete the form to register as a new user.</p>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %} 
+        {% for message in messages %}
+        <p style="color: red;">{{message}}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="registration_form">
+        <form action="/registration" method="post">
+            <input type="text" name="first_name" placeholder="First Name">
+            <br>
+            <input type="text" name="last_name" placeholder="Last Name">
+            <br>
+            <input type="text" name="username" placeholder="Username">
+            <br>
+            <input type="text" name="email" placeholder="Email Address">
+            <br>
+            <input type="password" name="password" placeholder="Password">
+            <br>
+            <input type="password" name="confirm_password" placeholder="Confirm Password">
+            <br>
+            <button type="submit">Register</button>
+        </form>
+        <form action="/login"> <button>Already registered? Log In!</button> </form>
+    </div>
+
+    </div>
+</body>
+</html>

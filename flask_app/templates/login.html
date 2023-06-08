@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/style.css') }}">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="regisration_login_form">
+        <h1>Welcome Back!</h1>
+        <p>Please provide your email and password to login.</p>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <p style="color: rgb(170, 0, 0) ;">{{message}}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <form action="/login_form" method="post">
+            <input type="text" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Log In</button>
+        </form>
+        <form action="/register"> <button>New User? Register Here!</button> </form>
+    </div>
+</body>
+
+</html>
