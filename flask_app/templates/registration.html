@@ -1,42 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Registration Page</title>
 </head>
+
 <body>
-    <div class="regisration_login_form">
+    <!-- <div class="regisration_login_form">
         <h1>Welcome!</h1>
         <p>Please complete the form to register as a new user.</p>
         {% with messages = get_flashed_messages() %}
-        {% if messages %} 
+        {% if messages %}
         {% for message in messages %}
         <p style="color: red;">{{message}}</p>
         {% endfor %}
         {% endif %}
         {% endwith %}
         <div class="registration_form">
-        <form action="/registration" method="post">
-            <input type="text" name="first_name" placeholder="First Name">
-            <br>
-            <input type="text" name="last_name" placeholder="Last Name">
-            <br>
-            <input type="text" name="username" placeholder="Username">
-            <br>
-            <input type="text" name="email" placeholder="Email Address">
-            <br>
-            <input type="password" name="password" placeholder="Password">
-            <br>
-            <input type="password" name="confirm_password" placeholder="Confirm Password">
-            <br>
-            <button type="submit">Register</button>
-        </form>
-        <form action="/login"> <button>Already registered? Log In!</button> </form>
-    </div>
+            <form action="/registration" method="post">
+                <input type="text" name="first_name" placeholder="First Name">
+                <br>
+                <input type="text" name="last_name" placeholder="Last Name">
+                <br>
+                <input type="text" name="username" placeholder="Username">
+                <br>
+                <input type="text" name="email" placeholder="Email Address">
+                <br>
+                <input type="password" name="password" placeholder="Password">
+                <br>
+                <input type="password" name="confirm_password" placeholder="Confirm Password">
+                <br>
+                <button type="submit">Register</button>
+            </form>
+            <form action="/login"> <button>Already registered? Log In!</button> </form>
+        </div>
 
-    </div>
+    </div> -->
+
+
+    <section class="vh-100" style="background-color: #f4f5f7;">
+        <div class="container py-5 h-100">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <p style="color: red;">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-lg-6 mb-4 mb-lg-0">
+                    <div class="card mb-3" style="border-radius: .5rem;">
+                        <div class="row g-0">
+                            <div class="col-md-4 gradient-custom text-center text-white"
+                                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                <img src="{{url_for('static', filename='/images/login-icon-png-21.png')}}" alt="Avatar"
+                                    class="img-fluid my-5" style="width: 80px;" />
+                                <br>
+                                <a href="/login">Already registered?</a>
+                                <p>TEXT HERE</p>
+                                <i class="far fa-edit mb-5"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-4">
+                                    <h2>Welcome!</h2>
+                                    <h6>Please complete the form to register as a new user.
+                                    </h6>
+                                    <hr class="mt-0 mb-3">
+                                    <div class="row pt-1 text-center">
+                                        <form action="/registration" method="post">
+                                            <input type="text" name="first_name" placeholder="First Name">
+                                            <br>
+                                            <input type="text" name="last_name" placeholder="Last Name">
+                                            <br>
+                                            <input type="text" name="username" placeholder="Username">
+                                            <br>
+                                            <input type="text" name="email" placeholder="Email Address">
+                                            <br>
+                                            <input type="password" name="password" placeholder="Password">
+                                            <br>
+                                            <input type="password" name="confirm_password"
+                                                placeholder="Confirm Password">
+                                            <br>
+                                            <button type="submit">Register</button>
+                                        </form>
+                                    </div>
+                                    <div class="row pt-1 text-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
