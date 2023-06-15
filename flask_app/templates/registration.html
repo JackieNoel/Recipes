@@ -12,38 +12,6 @@
 </head>
 
 <body>
-    <!-- <div class="regisration_login_form">
-        <h1>Welcome!</h1>
-        <p>Please complete the form to register as a new user.</p>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <p style="color: red;">{{message}}</p>
-        {% endfor %}
-        {% endif %}
-        {% endwith %}
-        <div class="registration_form">
-            <form action="/registration" method="post">
-                <input type="text" name="first_name" placeholder="First Name">
-                <br>
-                <input type="text" name="last_name" placeholder="Last Name">
-                <br>
-                <input type="text" name="username" placeholder="Username">
-                <br>
-                <input type="text" name="email" placeholder="Email Address">
-                <br>
-                <input type="password" name="password" placeholder="Password">
-                <br>
-                <input type="password" name="confirm_password" placeholder="Confirm Password">
-                <br>
-                <button type="submit">Register</button>
-            </form>
-            <form action="/login"> <button>Already registered? Log In!</button> </form>
-        </div>
-
-    </div> -->
-
-
     <section class="vh-100" style="background-color: #f4f5f7;">
         <div class="container py-5 h-100">
             {% with messages = get_flashed_messages() %}
@@ -59,17 +27,17 @@
                         <div class="row g-0">
                             <div class="col-md-4 gradient-custom text-center text-white"
                                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                                <img src="{{url_for('static', filename='/images/login-icon-png-21.png')}}" alt="Avatar"
+                                <img src="{{url_for('static', filename='/images/registerfood.avif')}}" alt="Avatar"
                                     class="img-fluid my-5" style="width: 80px;" />
                                 <br>
-                                <a href="/login">Already registered?</a>
-                                <p>TEXT HERE</p>
+                                <a class="text-decoration-none text-danger-emphasis" href="/login">Already
+                                    registered?</a>
                                 <i class="far fa-edit mb-5"></i>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body p-4">
                                     <h2>Welcome!</h2>
-                                    <h6>Please complete the form to register as a new user.
+                                    <h6>Please provide the information below to register as a new user.
                                     </h6>
                                     <hr class="mt-0 mb-3">
                                     <div class="row pt-1 text-center">
@@ -87,7 +55,7 @@
                                             <input type="password" name="confirm_password"
                                                 placeholder="Confirm Password">
                                             <br>
-                                            <button type="submit">Register</button>
+                                            <button class="btn-sm" type="submit">Register</button>
                                         </form>
                                     </div>
                                     <div class="row pt-1 text-center">

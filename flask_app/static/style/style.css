@@ -48,14 +48,9 @@ a {
 
 button {
     background-color: #F1C376;
-    border-radius: 10%;
+    border-radius: 35%;
     border: none;
     color: #606C5D;
-    padding: 3px 10px;
-    margin: 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* padding: 3px 10px; */
+    margin-top: 15px;
 }
