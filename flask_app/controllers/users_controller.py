@@ -57,10 +57,13 @@ def login_form():
     session['user_id'] = user_in_db.id
     return redirect('/success')
 
-@app.route('/edit_user_profile/<int:student_id>')
-def edit_profile(student_id):
-    print(student_id)
-    return render_template('edit_profile.html', one_user=User.show_one_user(student_id))
+@app.route('/edit_user_profile/<int:user_id>')
+def edit_profile(user_id):
+    print(user_id)
+    return render_template('edit_profile.html', one_user=User.show_one_user(user_id))
+
+# @app.route('update_user/<int:student_id>', methods=['post'])
+# def update_profile()
 
 #ADD EDIT PROFILE ROUTE TO POST NEW DATA !
 
