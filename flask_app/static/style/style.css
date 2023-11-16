@@ -1,56 +1,51 @@
 * {
-    /* border: 1px solid red; */
-    height: auto;
-    width: auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.gradient-custom {
-    /* fallback for old browsers */
-    background: #f6d365;
-
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right bottom, rgb(247, 230, 196), rgb(241, 195, 118));
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right bottom, rgb(247, 230, 196), rgb(241, 195, 118))
+html {
+    height: 100%;
 }
 
-
-h1,
-h2,
-h3 
-h4,
-h5,
-h6,
-p,
-form,
-input,
-label,
-button {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #606C5D;
+body {
+    height: 100%;
+    background-image: url(../images/background.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-a {
-    text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #606C5D;
+.text-green{
+    color:rgb(58, 133, 58)
 }
 
-/* Registration and Login Pages */
-
-.registration_form {
+.center-fit{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.login-reg-form{
+    max-width: 600px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: first baseline;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid #f5a549;
 }
-
-button {
-    background-color: #F1C376;
-    border-radius: 35%;
-    border: none;
-    color: #606C5D;
-    /* padding: 3px 10px; */
-    margin-top: 15px;
+.header{
+    border-bottom: 3px solid #f5a549;
+    display: flex;
+    justify-content: space-between;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.center-link{
+    font-size: medium;
+    text-decoration: none;
+    margin:auto;
 }
